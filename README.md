@@ -1,6 +1,6 @@
-# Munch & Match
+# Munch & Match🌦️🍔🏀
 
-A modern weather app with food and sports recommendations built with Vite + React + TypeScript, powered by Google's Gemini AI.
+A modern weather app that pairs your forecast with delicious food and fun sports recommendations, powered by Google's Gemini AI.
 
 ## Features
 
@@ -10,7 +10,14 @@ A modern weather app with food and sports recommendations built with Vite + Reac
 - 🎨 Beautiful light/dark theme switching
 - 📱 Fully responsive design
 - 🚀 Modern Claude-like chat interface with rocket animations
+- 
+## 🛠️ Tech Stack
 
+-   **Frontend:** Vite, React, TypeScript
+-   **Styling:** Tailwind CSS
+-   **AI:** Google Generative AI SDK (Gemini)
+-   **Icons:** Lucide React
+-   **Weather API:** Open-Meteo
 ## Setup
 
 1. *Install dependencies:*
@@ -165,3 +172,5 @@ export default defineConfig([
     },
   },
 ])
+
+-   **Developed By:** Arghadeep Bosu (https://github.com/arghaDEVIL)
