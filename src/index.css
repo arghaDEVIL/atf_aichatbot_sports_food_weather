@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
+
+@import "tailwindcss";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme-aware body background */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 30%, #e2e8f0 100%);
+  color: #1e293b;
+}
+
+/* Dark mode background */
+body.dark {
+  background: linear-gradient(135deg, #0c0a09 0%, #1c1917 30%, #292524 100%);
+  color: #fafaf9;
+}
+
+/* Ensure proper text contrast globally */
+* {
+  color: inherit;
+}
+
+/* High contrast text utilities */
+.text-primary {
+  @apply text-slate-900 dark:text-white;
+}
+
+.text-secondary {
+  @apply text-slate-700 dark:text-slate-300;
+}
+
+.text-muted {
+  @apply text-slate-600 dark:text-slate-400;
+}
+
+/* Minimal animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Clean card styling */
+.minimal-card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 24px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+}
+
+.dark .minimal-card {
+  background: rgba(55, 65, 81, 0.95);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #fafaf9;
+}
+
+/* Food Section */
+.food-section {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  border: 1px solid rgba(202, 138, 4, 0.3);
+  color: #9c7a5dff;
+}
+.dark .food-section {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #f1f5f9;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Sports Section */
+.sports-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: #0c4a6e;
+}
+.dark .sports-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  border: 1px solid rgba(100, 116, 139, 0.35);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Minimal animations */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus states */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Enhanced hover effects */
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+/* Smooth scaling for cards */
+.minimal-card:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced shadows for better depth */
+.shadow-enhanced {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark .shadow-enhanced {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Force better visibility in light mode */
+html:not(.dark) .text-slate-900 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-800 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-700 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #475569 !important;
+}
+
+/* Force button text visibility in light mode */
+html:not(.dark) button {
+  color: #1e293b;
+}
+
+html:not(.dark) button svg {
+  color: currentColor;
+}
+
+/* Force input visibility in light mode */
+html:not(.dark) input,
+html:not(.dark) textarea {
+  color: #1e293b !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Force border visibility in light mode */
+html:not(.dark) .border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .border-slate-300 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Force card backgrounds in light mode */
+html:not(.dark) .bg-white {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+/* Force header visibility in light mode */
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) header h1 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) header button {
+  color: #475569 !important;
+}
+
+html:not(.dark) header button:hover {
+  color: #1e293b !important;
+}
+
+/* Rocket Animation */
+@keyframes rocketLaunch {
+  0% {
+    transform: translate(0, 0) rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(50px, -50px) rotate(45deg) scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100px, -100px) rotate(45deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes rocketTrail {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+    width: 1.5rem;
+  }
+  80% {
+    opacity: 0.8;
+    width: 2rem;
+  }
+  100% {
+    opacity: 0;
+    width: 1rem;
+  }
+}
+
+.animate-rocket-launch {
+  animation: rocketLaunch 1s ease-out forwards;
+}
+
+.animate-rocket-trail {
+  animation: rocketTrail 1s ease-out forwards;
+}
+
+/* Additional light mode fixes */
+html:not(.dark) * {
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+html:not(.dark) .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95), rgba(226, 232, 240, 0.90)) !important;
+}
+
+html:not(.dark) .backdrop-blur-xl {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Force text visibility on all elements in light mode */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) p,
+html:not(.dark) span,
+html:not(.dark) div {
+  color: #1e293b;
+}
+
+/* Force button hover states in light mode */
+html:not(.dark) button:hover {
+  background-color: rgba(148, 163, 184, 0.1) !important;
+}
+
+/* Force input placeholder visibility */
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Force suggestion button visibility */
+html:not(.dark) .space-y-3 button {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(148, 163, 184, 0.4) !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) .space-y-3 button:hover {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
