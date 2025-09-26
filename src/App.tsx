@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavigationBar } from './components/layout/NavigationBar'
 import { ConversationPanel } from './components/chat/ConversationPanel'
 import { QueryInputPanel } from './components/input/QueryInputPanel'
