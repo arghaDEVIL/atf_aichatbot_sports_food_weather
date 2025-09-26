@@ -1,4 +1,4 @@
-# WeatherMood Studio
+# Munch & Match
 
 A modern weather app with food and sports recommendations built with Vite + React + TypeScript, powered by Google's Gemini AI.
 
