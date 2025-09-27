@@ -57,10 +57,8 @@ export class GeminiService {
       this.genAI = new GoogleGenerativeAI(apiKey)
       // Try different model names for free tier
       const modelNames = [
-        'gemini-1.5-flash-8b-latest',
-        'gemini-1.5-flash-latest',
-        'gemini-pro',
-        'gemini-1.0-pro'
+        'gemini-2.5-flash',
+        'gemini-2.5-flash-lite-preview-06-17'
       ]
 
       let modelInitialized = false
