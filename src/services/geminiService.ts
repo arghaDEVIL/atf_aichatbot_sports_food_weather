@@ -47,7 +47,7 @@ export class GeminiService {
 
   constructor() {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY
-    if (!apiKey || apiKey === 'your_gemini_api_key_here') {
+    if (!apiKey || apiKey === 'AIzaSyBvLbaQOzA-3m6lzDzmquIQsYy19ru9hac') {
       console.warn('Gemini API key not found, using fallback responses')
       this.hasApiKey = false
       return
